@@ -1,7 +1,6 @@
 <template>
   <section class="container">
     <div>
-      <app-logo/>
       <h1 class="title">
         measure_time
       </h1>
@@ -13,36 +12,14 @@
         <div @click="goTo(2)">tasks</div>
       </div>
       <div>
-       <TimeMeasure v-if="flag==1"></TimeMeasure>
+       <TimeMeasure/>
       </div>
     </div>
   </section>
 </template>
 
-<script>
-import AppLogo from '~/components/AppLogo.vue'
-import TimeMeasure from '../components/Timemeasure.vue';
-// import moduleName from '../components/Time';
-import Component from 'vue-class-component';
-import Vue from 'vue';
-
-@Component({
-components: {
-    AppLogo,
-    TimeMeasure
-  },
-  data:{
-    flag: null
-  },
-  methods: {
-    goTo: function(to) {
-      flag = to;
-    }
-  }
-})
-export default class Main extends Vue{
-  
-}
+<script lang="ts" src="./index.ts">
+export default class {}
 </script>
 
 <style>

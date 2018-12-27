@@ -7,28 +7,13 @@
 </section>
 </template>
 
-<script>
+<script lang="ts">
 
-import AppLogo from '~/components/AppLogo.vue'
-import TimeMeasure from '../components/Timemeasure.vue';
 // import moduleName from '../components/Time';
 import Component from 'vue-class-component';
 import Vue from 'vue';
 
-@Component({
-components: {
-    AppLogo,
-    TimeMeasure
-  },
-  data:{
-    flag: null
-  },
-  methods: {
-    goTo: function(to) {
-      flag = to;
-    }
-  }
-})
+
 export default class Main extends Vue{
   
 }
