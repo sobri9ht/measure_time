@@ -1,8 +1,12 @@
 <template>
   <div class="graph">
     <div :style="style"></div>
+    <div class="degree">
+    <span>
+      {{degree}}%
+    </span>
+    </div>
     <div class="total"></div>
-    {{degree}}
   </div>
 </template>
 
@@ -36,10 +40,8 @@ export default {
     background-color : rgb(241, 235, 235);
   }
   .degree {
-    width: 20%;
-    background: rgb(28, 177, 63);
-    height: 40px;
     position: absolute;
+    margin: auto 45.3%;
   }
   button{
     right : 0;
