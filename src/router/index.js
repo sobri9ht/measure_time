@@ -1,21 +1,20 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import List from '@/components/list'
-
+import Main from '@/components/main';
+import makeTask from '@/components/make-task';
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'Main',
+      component: Main
     },
     {
-      path: '/list',
-      name: 'List',
-      component: List
+      path: '/make',
+      name: 'makeTask',
+      component: makeTask
     }
   ]
 })
