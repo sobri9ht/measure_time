@@ -1,10 +1,10 @@
 <template>
   <div class="graph">
-    <div :style="style"></div>
-    <div class="degree">
-    <span>
-      {{degree}}%
-    </span>
+    <div class="degree-gauge" :style="style"></div>
+    <div class="degree-num">
+      <span>
+        {{degree}}%
+      </span>
     </div>
     <div class="total"></div>
   </div>
@@ -20,7 +20,6 @@ export default {
     background: rgb(28, 177, 63);
     height: 40px;
     position: absolute;`
-
     }
   },
   data () {
@@ -39,7 +38,7 @@ export default {
     height: 40px;
     background-color : rgb(241, 235, 235);
   }
-  .degree {
+  .degree-num {
     position: absolute;
     margin: auto 45.3%;
   }
