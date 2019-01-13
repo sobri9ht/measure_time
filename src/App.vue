@@ -1,34 +1,19 @@
 <template>
   <div id="app">
     <Header/>
-    <div @click="changeMode()">
-      <div class="gauge">
-        <div>{{modeMessage}}</div>
-        <div>
-          <span class="left">0</span>
-          <span class="center">50</span>
-          <span class="right">100</span>
-        </div>
-      </div>
-      <Graph :degree="degree"/>
-      <Graph :degree="degree"/>
-      <Graph :degree="degree"/>
-      <Graph :degree="degree"/>
-    </div>
-    <Bottom/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
+/* eslint-disable */
 import Header from '@/components/header'
 import Graph from '@/components/graph'
-import List from '@/components/list'
 import Bottom from '@/components/bottom'
 export default {
   components: {
     Header,
     Graph,
-    List,
     Bottom
   },
   data () {
