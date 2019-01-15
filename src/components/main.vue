@@ -28,7 +28,8 @@ import Bottom from '@/components/bottom';
 @Component({
   name: 'Main',
   components: {
-    Graph
+    Graph,
+    Bottom
   },
   props: [],
   data () {
