@@ -10,6 +10,7 @@
 import Header from '@/components/header'
 import Graph from '@/components/graph'
 import Bottom from '@/components/bottom'
+import Store from './store/store.ts';
 export default {
   components: {
     Header,
@@ -40,7 +41,10 @@ export default {
       }
     }
   },
-  name: 'App'
+  name: 'App',
+  mounted () {
+    Store.commit('setHeaderMessage',"추가")
+  }
 }
 
 

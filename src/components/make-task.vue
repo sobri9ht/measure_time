@@ -6,6 +6,8 @@
 </template>
 
 <script>
+import Store from '../store/store.ts';
+
 export default {
   name: 'makeTask',
   props: ['task'],
@@ -14,6 +16,12 @@ export default {
   data () {
     return {
     }
+  },
+  mounted () {
+    Store.commit('setHeaderMessage',"확인")
+    Store.commit('setCurrentMenu',"make")
+    
+
   }
 }
 </script>
