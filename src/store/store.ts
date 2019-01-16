@@ -3,7 +3,7 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-const Store = new Vuex.Store({
+export default new Vuex.Store({
   strict: true,
   state: {
     header_message: "추가",
@@ -14,9 +14,7 @@ const Store = new Vuex.Store({
       state.header_message = message
     },
     setCurrentMenu (state, menu) {
-      state.header_message = menu
+      state.current_menu = menu
     }
   }
 })
-
-export default Store;

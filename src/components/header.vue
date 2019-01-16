@@ -1,8 +1,7 @@
 <template>
   <div class="header">
     <div v-if="location == 'make'" @click="cancel">취소</div>
-    <div @click="make">{{store.state.header_message}}</div>
-    {{location}}
+    <div @click="make">{{this.$store.state.header_message}}</div>
     
   </div>
 </template>
@@ -25,22 +24,20 @@ export default {
   },
   methods: {
     make: function() {
-      // Store.commit('setHeaderMessage',"확인")
+      this.$store.commit('setHeaderMessage',"확인")
       this.$router.push('/make');
-      // router.push('/make');
     },
     cancel: function() {
       this.$router.push('/');
-
     }
   },
   computed: {
     location: {
     get () {
-      return Store.state.current_menu;
+      return this.$store.state.current_menu;
     },
     set (value) {
-      this.$store.commit('setHeaderMessage', value)
+      this.$store.commit('setCurrentMenu', value)
     }
   }
   },

@@ -18,9 +18,12 @@ export default {
     }
   },
   mounted () {
-    Store.commit('setHeaderMessage',"확인")
-    Store.commit('setCurrentMenu',"make")
-    
+    this.$store.commit('setHeaderMessage',"확인")
+    this.$store.commit('setCurrentMenu',"make")
+  },
+  destroyed () {
+    this.$store.commit('setHeaderMessage',"")
+    this.$store.commit('setCurrentMenu',"")
 
   }
 }

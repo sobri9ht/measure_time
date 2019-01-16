@@ -56,6 +56,14 @@ import Bottom from '@/components/bottom';
       }
     }
   },
+  mounted () {
+    this.$store.commit('setHeaderMessage',"추가")
+    this.$store.commit('setCurrentMenu',"main")
+  },
+  destroyed () {
+    this.$store.commit('setHeaderMessage',"")
+    this.$store.commit('setCurrentMenu',"")
+  }
   // 모든 컴포넌트 옵션이 이곳에 허용됩니다.
   // template: '<button @click="onClick">Click!</button>'
 })
