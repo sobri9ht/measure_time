@@ -51,8 +51,7 @@ import Bottom from '@/components/bottom';
         this.degree = this.todayDegree;
       }else {
         this.modeMessage = this.totalMessage;
-        this.degree = this.totalDegree
-
+        this.degree = this.totalDegree;
       }
     }
   },

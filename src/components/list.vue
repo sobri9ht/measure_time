@@ -3,8 +3,9 @@
     <div class="item">
       <div>영어듣기</div>
       <div @click="open">O</div>
-      <div class="start">시작</div>
-      <div>10:00</div>
+      <div @click="start" class="start">시작</div>
+      <div>{{timer}}</div>
+      <Timer/>
     </div>
     <div v-if="show" class="detail">
       <div>
@@ -23,12 +24,24 @@
 <script>
 import Vue from 'vue'
 import Component from 'vue-class-component'
+import VueTimers from 'vue-timers'
+import Timer from './timer';
+
 // @Component 데코레이터는 클래스가 Vue 컴포넌트임을 나타냅니다.
 @Component({
+  components: {
+    Timer
+  },
+  mixins: [VueTimers],
   name: 'List',
-  props: [],
   data () {
     return {
+      timer : ''
+    }
+  },
+  methods : {
+    start () {
+
     }
   }
   // 모든 컴포넌트 옵션이 이곳에 허용됩니다.

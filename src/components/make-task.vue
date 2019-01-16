@@ -1,7 +1,26 @@
 <template>
 <div class="wrapper">
-  <div class="header"><button>완료</button></div>
-  <div></div>
+  <div class="header"></div>
+  <div class= "bottom">
+      <div class="item">
+        <div>타이머 이름</div>
+        <div>
+          <input :placeholder="name" type="text">
+        </div>
+      </div>
+      <div class="item">
+        <div>총 목표 시간</div>
+        <div>
+          <input :placeholder="total_time" type="number"> <span>시간</span>
+        </div>
+      </div>
+      <div class="item">
+        <div>하루 목표시간</div>
+         <div>
+           <input :placeholder="daily_time" type="number"><span>시간</span>
+         </div>
+      </div>
+  </div>
 </div>
 </template>
 
@@ -15,6 +34,9 @@ export default {
   },
   data () {
     return {
+      name: '타이머 이름',
+      total_time: 100,
+      daily_time: 10,
     }
   },
   mounted () {
@@ -24,7 +46,6 @@ export default {
   destroyed () {
     this.$store.commit('setHeaderMessage',"")
     this.$store.commit('setCurrentMenu',"")
-
   }
 }
 </script>
@@ -36,6 +57,18 @@ export default {
     height: 40px;
     button{
       right: 10px;
+    }
+  }
+  .bottom {
+    .item{
+      display: flex;
+      :first-child{
+        width: 35%;
+      }
+      :last-child{
+        width: 65%;
+      }
+      
     }
   }
 }
