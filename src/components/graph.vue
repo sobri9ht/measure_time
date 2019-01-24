@@ -11,6 +11,8 @@
 </template>
 
 <script>
+/* eslint-disable */
+
 export default {
   name: 'Graph',
   props: ['degree'],

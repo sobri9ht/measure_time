@@ -22,17 +22,16 @@
 </template>
 
 <script>
+/* eslint-disable */
 import Vue from 'vue'
 import Component from 'vue-class-component'
-import VueTimers from 'vue-timers'
-import Timer from './timer';
+import Timer from './timer'
 
 // @Component 데코레이터는 클래스가 Vue 컴포넌트임을 나타냅니다.
 @Component({
   components: {
     Timer
   },
-  mixins: [VueTimers],
   name: 'List',
   data () {
     return {

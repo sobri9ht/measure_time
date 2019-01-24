@@ -10,7 +10,7 @@
 import Header from '@/components/header'
 import Graph from '@/components/graph'
 import Bottom from '@/components/bottom'
-import Store from './store/store.ts';
+import Store from './store/store.ts'
 export default {
   components: {
     Header,

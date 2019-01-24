@@ -9,13 +9,14 @@
 </template>
 
 <script>
+/* eslint-disable */
+
 import List from '@/components/list'
 export default {
   components: {
     List
   },
   name: 'Bottom',
-  props: [],
   data () {
     return {
     }

@@ -25,6 +25,8 @@
 </template>
 
 <script>
+/* eslint-disable */
+
 import Store from '../store/store.ts';
 
 export default {

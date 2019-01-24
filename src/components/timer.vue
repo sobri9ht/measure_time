@@ -9,44 +9,20 @@
 <script>
 /* eslint-disable */
 import Vue from 'vue';
+import Component from 'vue-class-component';
 import VueRouter from 'vue-router';
 
-Vue.use(VueRouter);
-
-export default {
-  name: 'Timer',
-  data () {
-    return {
-      hour : 0,
-      min : 0,
-      sec : 0,
-      timer : null
-    }
-  },
-  methods: {
-    pad: function (d) {
-    return (d < 10) ? '0' + d.toString() : d.toString();
-    },
-    start: function() {
-      timer = setInterval(
-        function() {
-          hour+=1
-        },
-        1000)
-    },
-    stop: function() {
-       clearInterval(timer);
-    }
-  },
+@Component({
+ name: 'Timer',
   computed: {
     HH () {
-      return this.pad(hour)
+      return this.pad(this.hour)
     },
     MM () {
-      return this.pad(min)
+      return this.pad(this.min)
     },
     SS () {
-      return this.pad(sec)
+      return this.pad(this.sec)
     },
     location: {
     get () {
@@ -57,7 +33,29 @@ export default {
     }
   }
   },
+}
+)
+export default class Time extends Vue{
+  hour = 0
+  min = 0
+  sec = 0
+  timer
  
+  pad (d) {
+  return (d < 10) ? '0' + d.toString() : d.toString();
+  }
+  start () {
+    this.timer = setInterval(
+      this.timeplus,
+      1000)
+  }
+  timeplus() {
+    this.sec = this.sec + 1;
+        console.log('this.hour :', this.hour);
+  }
+  stop () {
+      clearInterval(this.timer);
+  }
 }
 </script>
 

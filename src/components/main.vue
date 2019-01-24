@@ -31,7 +31,6 @@ import Bottom from '@/components/bottom';
     Graph,
     Bottom
   },
-  props: [],
   data () {
     return {
       degree: 23,

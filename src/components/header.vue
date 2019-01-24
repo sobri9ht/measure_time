@@ -8,11 +8,11 @@
 
 <script>
 /* eslint-disable */
-import Vue from 'vue';
-import VueRouter from 'vue-router';
-import Store from '../store/store.ts';
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import Store from '../store/store.ts'
 
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 
 export default {
   name: 'Header',
@@ -45,15 +45,12 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .header{
   background-color : grey;
   button{
     right : 0;
-
   }
-
 }
 
 </style>
